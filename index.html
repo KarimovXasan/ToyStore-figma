@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"/>
+    <!-- output css file -->
+    <link rel="stylesheet" href="./src/output.css">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <!-- bootstap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+    <title>Toy_Store</title>
+  </head>
+  <body class="bg-bluevold">
+    <!-- top -->
+    <div class="bg-green hidden md:block translate-x-0">
+      <div
+        class="container flex justify-between items-center text-white text-xs py-4"
+      >
+        <ul class="flex space-x-5">
+          <li>
+            <a href="#">Call Us: +1 213 974-5898</a>
+          </li>
+          <li>
+            <a href="#">Email: toystore@template.com</a>
+          </li>
+        </ul>
+        <ul class="flex space-x-3 social">
+          <li>
+            <a href="#">
+              <img src="images/icons/tw.svg" alt=""/>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img src="./images/icons/fc.svg" alt=""/>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img src="./images/icons/insta.svg" alt=""/>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img src="./images/icons/prin.svg" alt=""/>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img src="./images/icons/youtube.svg" alt=""/>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- header -->
+    <header class="sticky top-0 bg-white z-50">
+      <div class="container flex justify-between items-center py-6">
+        <div class="flex items-center space-x-9">
+          <a class="text-xl" href="#">ToyStore</a>
+
+          <nav class="hidden md:block">
+            <ul class="flex space-x-6">
+              <li>
+                <a href="#">Catalog</a>
+              </li>
+              <li>
+                <a href="#">Delivery</a>
+              </li>
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="flex items-center space-x-5">
+          <button class="flex items-center space-x-2 card-btn">
+            <span>Cart</span>
+            <i class="bi bi-cart"></i>
+            <span
+              class="count bg-green w-5 h-5 grid place-content-center rounded-full text-white text-sm"
+              >0</span>
+          </button>
+
+          <button aria-expanded="false" type="button" class="group relative h-6 w-6 menu-btn md:hidden" style=" --width: 1.25rem; --thickness: 0.125rem; --gap: 0.25rem; --color: #000; --duration: 300ms;">
+          </button>
+        </div>
+      </div>
+
+      <nav class="fixed top-[70px] inset-x-0 text-center h-80 bg-white border-b-2 border-gray flex items-center justify-center mobile-men translate-x-full  transition-all duration-300">
+        <ul class="flex flex-col space-y-6">
+          <li>
+            <a href="#">Catalog</a>
+          </li>
+          <li>
+            <a href="#">Delivery</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- hero -->
+    <section class="bg-hero py-28 lg:py-0 lg:h-[640px] bg-cover grid place-content-center">
+      <div class="container">
+        <div class="bg-white text-center px-10 md:px-28 py-10 rounded-2xl space-y-4">
+          <p class="text-green text-sm">Say Hello to ToyStore!</p>
+          <h1>Free Ecommerce<br/>Template for Webflow</h1>
+          <button class="btn-green">Open Catalog</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- catalog -->
+    <section>
+      <div class="container pt-10">
+        <ul class="grid grid-cols-1 lg:grid-cols-2 gap-10 text-white">
+          <li class="flex justify-center lg:justify-normal items-center bg-yellow rounded-2xl h-48 space-x-5 bg-green">
+            <img class="lg:-translate-y-12 w-40 md:w-52 h-40 md:h-52" src="./images/teddy.png" alt=""/>
+            <div class="space-y-3">
+              <h3 class="text-2xl md:text-[28px]">Stuffed Animals</h3>
+              <button class="btn-white">Shop Now</button>
+            </div>
+          </li>
+
+          <li class="flex flex-row-reverse lg:flex-row justify-center lg:justify-around items-center bg-pink rounded-2xl h-48 space-x-5 lg:pr-5"
+          >
+            <div class="space-y-3 lg:flex-grow lg:text-end">
+              <h3 class="text-2xl md:text-[28px]">Wooden Toys</h3>
+              <button class="btn-white">Shop Now</button>
+            </div>
+            <img class="lg:-translate-y-12 w-40 md:w-52 h-40 md:h-52 -translate-x-5 lg:translate-x-0" src="./images/woddtoys.png" alt=""/>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="flex justify-between items-center">
+          <h2>Stuffed Animals</h2>
+          <div class="space-x-1">
+            <button class="slider-btn prev1">
+              <i class="bi bi-arrow-left"></i>
+            </button>
+            <button class="slider-btn next1">
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+    <!-- animalys card -->
+        <div class="swiper mySwiper mt-10">
+          <ul class="swiper-wrapper animals-slide card">
+              <li class="swiper-slide">
+                <img class="w-44 h-44 mx-auto" src="./images/tedy-mini.png" alt=""/>
+                <h3>Teddy Bear</h3>
+                <button class="btn-green-sm">$ 40.00 USD</button>
+              </li>
+              <li class="swiper-slide">
+                <img class="w-44 h-44 mx-auto" src="./images/plush toy.png" alt="teddy"/>
+                <h3>Teddy Bear</h3>
+                <button class="btn-green-sm">$ 89.00 USD</button>
+              </li>
+  
+              <li class="swiper-slide">
+                <img class="w-44 h-44 mx-auto" src="./images/cute dog.png" alt="teddy"/>
+                <h3>Teddy Bear</h3>
+                <button class="btn-green-sm">$ 100.00 USD</button>
+              </li>
+  
+              <li class="swiper-slide">
+                <img  class="w-44 h-44 mx-auto" src="./images/little friend.png" alt="teddy"/>
+                <h3>Teddy Bear</h3>
+                <button class="btn-green-sm">$ 110.00 USD</button>
+              </li>
+  
+              <li class="swiper-slide">
+                <img class="w-44 h-44 mx-auto" src="./images/teddy.png" alt="teddy"/>
+                <h3>Teddy Bear</h3>
+                <button class="btn-green-sm">$ 100.00 USD</button>
+              </li>
+  
+              <li class="swiper-slide">
+                <img class="w-44 h-44 mx-auto" src="./images/plush toy.png" alt="teddy"/>
+                <h3>Teddy Bear</h3>
+                <button class="btn-green-sm">$ 55.00 USD</button>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- wooden -->
+    <section>
+      <div class="container">
+        <div class="flex justify-between items-center">
+          <h2>Wooden Toys</h2>
+          <div class="space-x-1">
+            <button class="slider-btn prev2">
+              <i class="bi bi-arrow-left"></i>
+            </button>
+            <button class="slider-btn next2">
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+    <!-- woden toys card -->
+        <div class="swiper mySwiper2 mt-10">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <img class="w-44 h-44 mx-auto" src="./images/HAPPY FLOWER.png" alt=""/>
+              <h3>Teddy Bear</h3>
+              <button class="btn-green-sm">$ 30.00 USD</button>
+            </li>
+            <li class="swiper-slide">
+              <img class="w-44 h-44 mx-auto" src="./images/lift machine.png" alt="teddy"/>
+              <h3>Teddy Bear</h3>
+              <button class="btn-green-sm">$ 30.00 USD</button>
+            </li>
+
+            <li class="swiper-slide">
+              <img class="w-44 h-44 mx-auto" src="./images/wodden toys.png" alt="teddy"/>
+              <h3>Teddy Bear</h3>
+              <button class="btn-green-sm">$ 30.00 USD</button>
+            </li>
+
+            <li class="swiper-slide">
+              <img  class="w-44 h-44 mx-auto" src="./images/little rabbri.png" alt="teddy"/>
+              <h3>Teddy Bear</h3>
+              <button class="btn-green-sm">$ 30.00 USD</button>
+            </li>
+
+            <li class="swiper-slide">
+              <img class="w-44 h-44 mx-auto" src="./images/little rabbri.png" alt="teddy"/>
+              <h3>Teddy Bear</h3>
+              <button class="btn-green-sm">$ 30.00 USD</button>
+            </li>
+
+            <li class="swiper-slide">
+              <img class="w-44 h-44 mx-auto" src="./images/little rabbri.png" alt="teddy"
+              />
+              <h3>Teddy Bear</h3>
+              <button class="btn-green-sm">$ 30.00 USD</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- story -->
+    <section class="bg-play bg-cover h-[464px] flex items-center my-10 px-5 md:px-0">
+      <div class="container backdrop-blur-sm py-8 rounded-3xl">
+        <div class="w-full md:w-8/12 mx-auto text-center text-gray space-y-3">
+          <p>About The Shop</p>
+          <h2>Watch Our Story</h2>
+          <p>
+            There is no magic formula to write perfect ad copy. It is based on a
+            number of factors, including ad placement, demographic, even the
+            consumer’s mood.
+          </p>
+
+          <button class="bg-white py-2 px-4 rounded-xl">
+            <lord-icon
+              src="https://cdn.lordicon.com/lwvaowvp.json"
+              trigger="hover"
+              style="width: 30px; height: 30px; color: white"
+            >
+            </lord-icon>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- about -->
+    <section>
+      <div class="container text-center">
+        <p class="text-green">Made for Webflow</p>
+        <h2 class="mt-3">
+          Simple & Colorful Ecommerce <br />
+          Template for Your Business
+        </h2>
+
+        <div class="mt-20 grid items-center md:grid-cols-2 gap-y-5 text-left">
+          <div class="space-y-5 order-2 text-center md:text-left">
+            <h3 class="text-3xl">Available for FREE!</h3>
+
+            <p class="text-gray md:w-9/12 text-sm">
+              A successful marketing plan relies heavily on the pulling-power of
+              advertising copy. Writing result-oriented ad copy is difficult, as
+              it must appeal to, entice, and convince consumers to take action.
+              There is no magic formula to write perfect ad copy
+            </p>
+
+            <button class="btn-green">GET IT NOW!</button>
+          </div>
+
+          <div class="order-1 md:order-3">
+            <img src="./images/spiderman.png" alt="spiderman" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- cta -->
+    <section>
+      <div class="container">
+        <div
+          class="flex flex-col space-y-3 md:flex-row justify-between py-10 px-8 bg-white rounded-2xl shadow-card md:w-11/12 mx-auto"
+        >
+          <div class="flex items-center space-x-3">
+            <button class="bg-green p-2 rounded-sm">
+              <img src="./images/icons/telega.svg" alt="send" />
+            </button>
+            <p class="text-xl">
+              Subscribe to our newsletter <br />
+              & get <span class="text-green">10% discount!</span>
+            </p>
+          </div>
+
+          <div class="md:space-x-3 space-y-3">
+            <input
+              class="outline-none bg-slate-200 border-2 border-slate-300 py-3 rounded-3xl px-5 w-80"
+              type="text"
+              placeholder="Enter email"
+            />
+            <button class="btn-green w-full md:w-auto">Subrice :)</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- gallery 6x -->
+    <section>
+      <div class="container text-center">
+        <p class="text-green">@ElasticThemes</p>
+        <h2>We're on Instagram!</h2>
+        <!-- image footer -->
+        <ul class="grid grid-cols-3 md:grid-cols-6 gap-4 mt-10">
+          <li><img src="./images/img/section.png" alt=""/></li>
+          <li><img src="./images/img/section2.png" alt=""/></li>
+          <li><img src="./images/img/section3.png" alt=""/></li>
+          <li><img src="./images/img/section4.png" alt=""/></li>
+          <li><img src="./images/img/section5.png" alt=""/></li>
+          <li><img src="./images/img/section6.png" alt="" /></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-green text-white py-10">
+      <div class="container">
+        <div
+          class="flex flex-col md:flex-row space-y-3 md:space-y-0 justify-between items-center border-b pb-10 border-white"
+        >
+          <a class="text-xl" href="#">ToyStore</a>
+
+          <nav>
+            <ul class="flex space-x-6">
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">Catalog</a>
+              </li>
+              <li>
+                <a href="#">Delivery</a>
+              </li>
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="flex w-full justify-around md:w-auto md:justify-normal space-x-3 social">
+            <li>
+              <a href="#">
+                <img src="./images/icons/tw.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./images/icons/fc.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./images/icons/insta.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./images/icons/pt.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./images/icons/yt.svg" alt="" />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex flex-col md:flex-row justify-between mt-10">
+          <p>Created with love by Elastic Themes</p>
+          <div class="flex space-x-6">
+            <p>Powered by</p>
+            <ul class="flex space-x-5 list-[square]">
+              <li>Style Guide</li>
+              <li>Licensing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".next1",
+          prevEl: ".prev1",
+        },
+        loop: true,
+        breakpoints: {
+          499: {
+            slidesPerView: 2,
+          },
+          800: {
+            slidesPerView: 3,
+          },
+          1200: {
+            slidesPerView: 4,
+          },
+        },
+      });
+
+      var swiper2 = new Swiper(".mySwiper2", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".next2",
+          prevEl: ".prev2",
+        },
+        loop: true,
+        breakpoints: {
+          499: {
+            slidesPerView: 2,
+          },
+          800: {
+            slidesPerView: 3,
+          },
+          1200: {
+            slidesPerView: 4,
+          },
+        },
+      });
+    </script>
+
+    <!-- custom js -->
+    <script src="./js/app.js"></script>
+  </body>
+</html>
